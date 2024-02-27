@@ -1,0 +1,154 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{textcomp}
+
+\usepackage[
+    hidelinks,
+    pdfnewwindow=true,
+    pdfauthor={Benaytomas},
+    pdftitle={Benay Tomas Class Notes},
+    pdfpagemode=UseThumbs,
+]{hyperref}
+
+\newcommand{\cvsection}[1]{\section*{\rmfamily#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{\rmfamily\hspace{1.5em}#1}}
+\newcommand{\HL}[1]{\textbf{\color{red}#1}}
+
+\begin{document}
+\fontfamily{lmr}\selectfont
+
+\begin{center}
+
+    {\LARGE
+        Análise Orientada a Objetos - Aula 03\\
+    }
+    {\Large
+        Benay T. da L. de Carvalho - Universidade Norte do Paraná\\
+        RA: 3681235802
+    }
+
+\end{center}
+
+\vspace{1cm}
+
+\section{Diagrama Máquinas de Estado}
+
+\indent
+\cvsection{Elementos do Diagrama Máquina de Estados}
+
+{\Large
+\begin{itemize}
+    \item \textbf{Estado inicial/final:} Estado inicial só pode haver um.\\
+    Estado final pode ter vários.
+    \item \textbf{Estado:} Representa o estado de uma entidade do sistema.
+    Contém as cláusulas do que será feito. \\Exemplo: Interface Caixa ATM - exibirSaldoNaTela
+    \item \textbf{Transição:} Liga os elementos.
+    \item \textbf{Escolha:} Representa um estado condicional.
+    \item \textbf{Fork:} Separa uma transição em duas ou mais.
+    \item \textbf{Join:} Junta duas ou mais transições em uma.
+\end{itemize}
+}
+
+\indent
+\cvsection{Cláusulas dos Estados}
+
+{\Large
+
+\hspace{1em}Cláusulas representam os tipos de ações em um Estado.
+
+\begin{description}
+    \item \textbf{Do:} Ações que o objeto faz pra se manter naquele estado.
+    \item \textbf{Entry:} Ações para o objeto assumir novo estado.
+    \item \textbf{Exit:} Ações para o objeto sair de estado.
+\end{description}
+
+\noindent
+\hspace{1em}Em diagramas com muita abstração, não usa-se as cláusulas.
+}
+
+\newpage
+
+\indent
+\cvsection{Passos para construir um diagrama M.E.}
+
+{\Large
+\begin{enumerate}[label=\textbf{\arabic*}º]
+    \item Identificar os estados relevantes para os objetos.
+    \item Identificar os eventos e transições dos estados.
+    \item Verificar se há fatores que influenciam os eventos.
+    \item Definir estado inicial e final.
+\end{enumerate}
+}
+
+\indent
+\section{Diagrama de Sequência}
+
+\indent
+\cvsection{Elementos do Diagrama de Sequência}
+
+{\Large
+\begin{itemize}
+    \item \textbf{Lifeline:} Serve para indicar a existência de outros elementos.
+    \item \textbf{Ator:} Indica um objeto-pessoa.
+    \item \textbf{Objeto:} Entidades que interagem entre si no sistema.
+    \item \textbf{Foco de controle:} Linha tracejada onde ocorre a troca de mensagens
+    entre objetos.
+    \item \textbf{Frames:} Indicam a existência de outro diagrama, serve para melhor
+    organizar o diagrama.
+    \item \textbf{Mensagem Assíncrona:} Comando que espera resposta.
+    \item \textbf{Mensagem Síncrona:} Comando que não espera resposta.
+    \item \textbf{Mensagem de Resposta:} Serve para responder as outras mensagens e também
+    criar ou destruir elementos. 
+\end{itemize}
+}
+
+\newpage
+
+\indent
+\cvsection{Referências}
+
+{\Large
+\hspace{1em}Classificações dos frames
+\begin{description}
+    \item \textbf{ref:} Faz referência a outro diagrama; Seria o equivalente
+    a chamar uma função em programação.
+    \item \textbf{alt:} Executará apenas o que for verdadeiro. Pode haver 
+    múltiplas opções.
+    \item \textbf{opt:} Executará se for verdadeiro. Só haverá uma opção.
+    \item \textbf{loop:} Indica um loop
+\end{description}
+}
+
+\indent
+\section{Diagrama de Comunicação}
+
+{\Large
+\begin{itemize}
+    \item \textbf{Lifeline}
+    \item \textbf{Ator}
+    \item \textbf{Mensagem}
+    \item \textbf{Nota:} Nota para descrever o que for necessário.
+    \item \textbf{Vinculo:} Serve para ligar elementos entre si.
+    \item \textbf{Vinculo Recursivo:} Serve para ligar um elemento a ele mesmo.
+    Como uma função recursiva. Por exemplo, depois de receber o valor de uma senha
+    o computador analisa se é a senha correta ele mesmo, sem precisar enviar essa informação
+    para outra entidade.
+\end{itemize}
+
+\hspace{1em}O Diagrama de Comunicação é muito parecido com o de Sequência
+a diferença é que ele é organizado de forma diferente e contém numerações
+para indicar a ordem de ocorrência dos eventos.
+
+
+\vfill
+\begin{center}
+    Curitiba\\
+    2023
+\end{center}
+}
+\end{document}
