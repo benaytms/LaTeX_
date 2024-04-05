@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace} 
+
+\title{Lecture 1 Differentiation}
+\author{Benay Tomas}
+
+\begin{document}
+
+\maketitle
+
+\indent
+\section{What is a Derivative?}
+
+{\Large
+\begin{itemize}
+    \item Geometric Interpretation
+    \item Physical Interpretation
+    \item The Importance to all measurements
+\end{itemize}
+}
+
+\section{How to differentiate any function you want}
+
+\vspace{0.25cm}
+\Large
+\textbf{Geometric Interpretation}
+
+\vspace{0.5cm}
+By the Geometric interpretation, the derivative is
+the slope of the tangent line in a point P in any function F$(x$).
+
+But what is a tangent line?
+
+Objective: Find the tangent line to f$(x$) at P$(x_0,y_0$):
+
+\vspace{1cm}
+\begin{center}
+\includegraphics*[height=5cm, width=8cm]{tangLine.png}
+
+Figure 1: Function with tangent and secant lines
+\end{center}
+
+\vspace{1cm}
+
+Picture a secant line that crosses through P and another
+random point Q, now imagine this point Q gets closer and closer
+to P, the limit of the secant line as the distance
+between the two points goes to zero IS the tangent line.
+
+\newpage
+
+Let's consider the distance in the X-axis from P to Q as $\Delta$x.
+So P is on $(x_0, f(x_0))$ and Q is on $(x_0+\Delta x, f(x_0+\Delta x))$.
+
+And know to calculate the tangent line we'll use the \textbf{the slope equation:}
+m = $(y-y_0$)/$(x-x_0$).
+
+But instead of `y' it will be Q's Y-coordinate, instead of `y0' it'll be
+P y-coordinate, `x-x0' will be simply $\Delta$x as it is the X difference already. 
+
+We'll have:
+
+\begin{center}
+\begin{math}
+    \lim_{\Delta x\to 0} \dfrac{f(x_0+\Delta x) - f(x_0)}{\Delta x} = f'(x_0)
+\end{math}
+\end{center}
+
+Thus the derivative.
+
+\vspace{1cm}
+
+\Large
+\textbf{Example 1. $f(x) = \dfrac{1}{x}$}
+\vspace{0.4cm}
+\noindent
+
+One thing to keep in mind when calculating the derivative, is to never
+plug $\Delta$x = 0, because of the underdetermination of dividing by 0.
+So, instead, what we do is manipulate the function and its properties 
+to make sure we don't end up dividing something by zero.
+
+\begin{center}
+    \includegraphics*[height=3.2cm, width=16.5cm]{example1.png}
+\end{center}
+
+{\Large
+\textbf{Finding the tangent line}
+}
+
+Now that we know the slope of the function is $\dfrac{-1}{x_0^2}$.
+We just have to use the equation for the tangent line again and plug in 
+the values of the function in x0 and the slope.
+
+And we'll get: 
+
+\vspace{0.4cm}
+
+\begin{center}
+\begin{math}
+    y = \dfrac{-1}{x_0^2}(x-x_0) + \dfrac{1}{x_0}
+\end{math}
+\end{center}
+
+Simplifying:
+
+\begin{center}
+\begin{math}
+        y = -\dfrac{x-2x_0}{x_0^2}
+\end{math}
+\end{center}
+
+\newpage
+\section{Notations}
+
+The derivative can be expressed as $f'(x)$ or $\dfrac{d}{dx}f(x)$ or
+$\dfrac{dy}{dx}$ or $\dfrac{df}{dx}$ and D$f$
+
+\section{Properties}
+
+This section will have a separated document file just for it, due to having
+an enourmous amount of Calculus Properties, not only derivatives but limits
+and integrals too.
+
+\end{document}
