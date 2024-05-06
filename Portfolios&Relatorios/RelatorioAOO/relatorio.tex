@@ -1,0 +1,127 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+
+\fontfamily{lmdh}\selectfont 
+\renewcommand\thesection{\Roman{section}}
+\renewcommand{\arraystretch}{1.3}
+
+
+\title{Relatório da Aula Prática $-$ Análise Orientada a Objetos}
+\author{Benay T. da L. de Carvalho | $RA: 36812358$}
+\date{3 de Maio, 2024}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{headings}
+\indent
+\section{Introdução}
+Seguindo o roteiro para a aula prática, foi feito um diagrama de classes
+para simular um sistema de locação de carros, dentro desse diagrama foram
+colocadas diferentes classes com diferentes atributos e métodos. Tendo isso
+em vista, nesse relatório será abordado a lógica por trás do meu raciocínio 
+e os passos que levaram para o resultado final do diagrama mencionado.
+
+\indent
+\section{Métodos}
+Com base no que foi proposto, foi feito um diagrama de classes
+para representar e demonstrar o funcionamento de um sistema em uma 
+empresa de locação de carros. 
+
+Os seguintes métodos, atributos e classes foram incluidos:
+
+\begin{center}
+    \begin{table}[h]
+        \begin{tabular}{  l  p{6cm}  p{6cm} }
+            \toprule
+\textbf{Classes}      
+& \textbf{Atributos}   
+& \textbf{Métodos} \\\midrule
+Empresa
+& Nome, idade da empresa, filial, quantidade de carros e reputação.
+& Comprar carros, negociar parceria e pagar funcionário.\\ \hline
+Funcionario      
+& Nome, idade, numero de identificação, telefone e cargo.                         
+& Atender clientes, pegar informação do carro, fornecer formulário e emitir contrato.\\ \hline
+Cliente
+& Nome completo, idade, endereço, telefone, CPF, RG, foto 3x4 e cópia de documento.
+& Preencher formulário, locar carro, devolver carro e pagar alocação. \\\hline
+Carro     
+& Cor, ano, quilometragem, número da placa e cidade da placa. 
+& Esta alocado, data e hora da alocação e data e hora da devolução. \\ \hline
+Marca
+& Nome, idade da marca, quantidade de carros e reputação.
+& Vender carros e fazer parceria. \\ \hline
+Modelo
+& Nome do modelo, data de lançamento, tipo de combustível e preço de locação.
+& Não possui métodos. \\ \hline
+Inventário
+& Item e quantidade
+& Procurar item no inventário, passar informações do item e atualizar estoque. \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{center}
+
+As classes são as abstrações das entidades que serão observadas na vida real.
+Quando um objeto de certa classe for instânciado, ele irá herdar todas as características
+que sua classe possui. Dito isso as características que uma classe pode ter se resume em
+duas, os atributos e métodos.
+
+Os atributos são informações estáticas, eles são valores geralmente imutáveis que
+o objeto instânciado terá. Enquanto os métodos são ações que esses objetos podem ter.
+Comumente os atributos são escritos constituindo de substantivos e separados por underline.
+E os métodos são normalmente escritos com substantivos junto de verbos no infinitivo.
+
+\newpage
+\thispagestyle{headings}
+\indent
+\section{Resultados}
+Esse foi o resultado do diagrama de classes feito para simular um sistema de locação
+de veículos.
+
+\begin{center}
+\includegraphics*[width=16.5cm, height=13cm]{classdiagram_aoo.png}
+\end{center}
+
+\indent
+\section{Conclusão}
+Com isso temos uma visão geral de como um sistema representado por um diagrama de classes
+se comporta. Usando esse diagrama podemos entender melhor
+sobre as relações e associações entre as entidades do sistema, ao mesmo tempo 
+também ter uma visão aprofundada do que consiste cada objeto e 
+quais ações os mesmos podem ter.
+
+O diagrama de classes é um dos diagramas mais utilizados da Unified Modelling Language (UML).
+Ele pega a ideia do diagrama de casos de uso e adiciona o conceito de orientação a objetos,
+resultando em uma modelagem completa e detalhada sem compromenter o entendimento mantendo
+o modelo simples e mais abstrato. 
+
+Dessa forma ele se torná perfeito para situações
+em que você precisa saber o que cada objeto pode ou não pode fazer.
+
+\newpage
+\thispagestyle{headings}
+\indent
+\section{Referências}
+
+\begin{enumerate}
+    \item Fancy Tables in LaTeX $-$ https://tex.stackexchange.com/questions/94032/fancy-tables-in-latex
+    \item Slides das aulas de Análise Orientada a Objetos (Prof. Vanessa Matias Leite)
+\end{enumerate}
+
+\vfill
+\begin{center}
+    Curitiba\\
+    2024
+\end{center}
+
+\end{document}

@@ -1,0 +1,7 @@
+> O cliente pode abrir e encerrar contas, para isso, ele deverá procurar um funcionário no banco.
+> O cliente pode abrir uma conta do tipo especial ou poupança.
+> O cliente pode depositar ou sacar dinheiro, estas funcionalidades podem ser feitas no caixa eletrônico
+> O cliente pode emitir o saldo ou extrato da sua conta, estas funcionalidades podem ser feitas no caixa
+eletrônico.
+> Para o cliente encerrar a sua conta, seu saldo deve estar zerado.
+Cada movimentação realizada deve ser registrada.

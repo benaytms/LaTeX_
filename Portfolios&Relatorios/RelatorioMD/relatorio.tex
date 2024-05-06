@@ -1,0 +1,108 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+
+\fontfamily{lmdh}\selectfont 
+\renewcommand\thesection{\Roman{section}}
+\renewcommand{\arraystretch}{1.3}
+
+
+\title{Relatório da Aula Prática $-$ Modelagem de Dados}
+\author{Benay T. da L. de Carvalho | $RA: 36812358$}
+\date{4 de Maio, 2024}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{headings}
+\indent
+\section{Introdução}
+A partir do procedimento da aula prática, foi elaborado um Diagrama
+Entidade-Relacionamento utilizando a ferramenta MySQL Workbench. 
+E nesse relatório irei explicar o procedimento que deve ser feito para a 
+elaboração desse diagrama e o resultado final.
+
+A atividade proposta foi a seguinte, uma biblioteca de uma universidade
+realiza empréstimo de suas obras para os alunos da instituição. Tendo isso
+em vista, nesse contexto temos:
+\begin{itemize}
+    \item Aluno: Pessoas que possuem registro na faculdade.
+    \item Livro: Publicações físicas com registros passiveis de serem emprestados.
+    \item Colaborador: Funcionário da instituição autorizado a fazer empréstimos.
+    \item Empréstimo: A ação a ser executada pelo aluno.
+\end{itemize}
+
+Com isso, cada uma dessas entidades têm certas características. O aluno terá
+RA, nome, email e telefone. O livro terá ISBN, nome, autor e número de páginas.
+O colaborador terá CPF, nome, email e cargo. O empréstimo terá ID, data de empréstimo,
+data de devolução, ISBN do Livro e CPF do colaborador. Cada um desses itens em maiúsculo
+é chamado de chave primária, é o que irá diferenciar cada entidade.
+
+Em seguida irei explicar o processo para produção do diagrama.
+
+\indent
+\section{Desenvolvimento}
+Antes de começarmos, deverá ser feito o Download da ferramenta MySQL Workbench.
+
+Acesse o site: https://dev.mysql.com/downloads/workbench/ e faça o download.
+Após a instalação, abra a ferramenta. Dentro do aplicativo clique em File,
+New Model e Dê dois cliques em ``Add Diagram''. Com isso feito, podemos começar.
+
+Primeiro, adicionamos 4 novas tabelas, uma para cada entidade do sistema (Aluno, Livro, Colaborador e Empréstimo).
+Depois, colocamos os atributos de cada um levando em consideração
+o tipo de cada atributo, os Nomes e Emails estarão em VALCHAR, os valores numéricos em INT
+e as datas em DATETIME.
+No caso do Empréstimo nós não colocamos ISBN do Livro nem
+CPF do colaborador porque esses já são atributos dos outros objetos. 
+O que precisamos fazer é colocar a relação de generalização (linha tracejada) 
+entre eles para que o Empréstimo herde as chaves primárias do 
+Colaborador e do Livro.
+
+Tendo isso feito, precisamos apenas colocar as relações entre essas
+entidades e está pronto.
+
+\indent
+\section{Resultado}
+Esse é o resultado do Diagrama Entidade-Relacionamento feito em MySQL
+Workbench.
+
+\begin{center}
+    \includegraphics*[width=11cm, height=7cm]{diagramaDER.png}
+\end{center}
+
+\newpage
+\thispagestyle{headings}
+
+\indent
+\section{Conclusão}
+Tendo o diagrama pronto, conseguimos ter uma visão do funcionamento de um sistema
+básico de uma biblioteca universitária. Com isso conclui-se por meio deste relatório,
+a utilidade do Diagrama Entidade-Relacionamento. 
+
+É recomendado a utilização desse diagrama para casos em que 
+precisamos visualizar ou desenvolver uma estrutura de um 
+banco de dados com uma visão detalhada e expressiva.
+
+\indent
+\section{Referências}
+
+\begin{enumerate}
+    \item Relationship in ER Diagrams $-$ https://www.datensen.com/blog/data-modeling/relationships-in-er-diagrams/
+    \item Slides das Aulas de Modelagem de Dados (Prof. Marco Hisatomi)
+\end{enumerate}
+
+\vfill
+\begin{center}
+    Curitiba
+
+    2024
+\end{center}
+
+\end{document}
