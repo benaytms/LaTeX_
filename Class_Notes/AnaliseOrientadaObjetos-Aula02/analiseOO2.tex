@@ -1,0 +1,170 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+    {\LARGE
+        Análise Orientada a Objetos - Aula 02\\
+    }
+    {\Large
+        Benay T. da L. de Carvalho - Universidade Norte do Paraná\\
+        RA: 3681235802
+    }
+
+\end{center}
+
+\vspace{1cm}
+
+\large
+
+\noindent
+\textbf{Diagramas de casos de Uso, classes e atividades.} 
+
+\begin{itemize}
+    \item Diagrama de Casos de uso: é um diagrama comportamental com alta abstração, usado em requisitos.
+    \item Diagrama de Classes: são os mais usados da UML, mostra a relação entre classes.
+    \item Diagrama de Atividades: mostra o fluxo das ações e atividades de um sistema, 
+    é uma variação do caso de uso.
+\end{itemize}
+
+\indent
+\textbf{\\Diagrama de Casos de Uso}
+
+\begin{enumerate}[label*=\textbf{\arabic*}.]
+
+    \item Elipse (caso de uso): verbo no infinitivo + substantivo
+    \item Ator (Objetos/Entidades): apenas o nome
+    \item Conexões: relações entre casos de uso
+    \begin{enumerate}[label*=\textbf{\arabic*}.]
+        \item Associação: associa diretamente um ator com caso de uso
+        \item Generalização: herda elementos de um caso para outro(s)
+        \item Extensão/Incluir: incluir é obrigatoriedade, extensão é opcional
+    \end{enumerate}
+    \item Multiplicidade: quantidade de atores irão utilizar um caso de uso e vice-versa
+\end{enumerate}
+
+\indent
+\textbf{\\Diagrama de Classes}
+
+\begin{enumerate}[label*=\textbf{\arabic*}.]
+
+    \item Objeto: é a instância da Classe
+    \item Atributos: características do Objeto
+    \item Métodos: funcionalidades do Objeto
+    \item Encapsulamento
+    \begin{enumerate}[label*=\textbf{\arabic*}.]
+        \item Publico(+) Public: todos têm acesso aos atributos
+        \item Privado(-) Private: apenas a classe do objeto pode mexer nos atributos
+        \item Protegido(\#) Protected: funciona igualmente ao Privado 
+        com adicional que as classes filhas também têm acesso aos atributos
+        \item Geralmente os atributos são privados e os métodos públicos mas isso pode variar
+    \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\indent
+\textbf{\\Tipos de Classe}
+
+\textbf{\\Abstrata}
+\begin{itemize}
+    \item Representada pelo nome em itálico
+    \item Não geram instâncias, servem apenas para representar hierarquia e generalização
+\end{itemize}
+
+\textbf{\\Interface}
+\begin{enumerate}[label*=\textbf{\arabic*}.]
+    \item Representada com <<nomeInterface>>
+    \item Representa um conjunto de elementos públicos 
+    que devem ser implementados por outras classes
+    \item Relacionamentos
+    \begin{itemize}
+        \item Herança: herda funcionalidades da classe pai para classe filha. Representada
+        por uma seta cheia
+        \item Implementação: as classes filhas irão implementar a classe interface pai,
+        vão instanciar a classe pai, de certa forma. Representada por uma seta tracejada
+    \end{itemize}
+\end{enumerate}
+
+\indent
+\textbf{\\Multiplicidade}
+Multiplicidade representa os limites inferior e superior da quantidade
+de objetos aos quais outro objeto está associado. Esses valores podem variar de
+0 à * (que representa muitos) 
+
+\begin{itemize}
+
+    \item 1 - Exatamente um
+    \item 1...* - No mínimo 1, no máximo vários
+    \item 0...1 - No mínimo 0, no máximo 1
+
+\end{itemize}
+
+\indent
+\textbf{\\Composição e Agregação}
+
+\begin{itemize}
+
+    \item Agregação: agregar um objeto a outro, de maneira não obrigatória.\\
+    Similiar ao Extender do Caso de Uso. Representado por uma seta de losango.
+    \item Composição: exigi um objeto para outro existir, de maneira obrigatória.\\
+    Similar ao Incluir do Caso de Uso. Representado por uma seta de losango cheia.
+
+\end{itemize}
+
+\newpage
+
+\indent
+\textbf{\\Estereótipos}
+
+\begin{enumerate}[label*=\textbf{\arabic*}.]
+
+    \item <<boundary>>: representa a interface do sistema 
+    \item <<control>>: controle da aplicação, 
+    serve de intermediário entre as classes boundary e entity
+    \item <<entity>>: contém informações geradas ou recebidas pelo sistema
+
+\end{enumerate}
+
+\indent
+\textbf{\\Diagrama de Atividades}
+Esses são os elementos mais comuns no Diagrama de Atividades:
+
+\begin{enumerate}[label=\textbf{\arabic*}.]
+
+    \item \textbf{Inicial:} Representa o início do diagrama e é obrigatório(circulo fechado)
+    \item \textbf{Final:} Representa o fim de um fluxo, é usado para o finalizar o diagrama, 
+    pode ser usado mais de uma vez em diferentes circunstâncias
+    (circulo fechado com contorno)
+    \item \textbf{Terminal:} Representa o fim de um fluxo, porém não encerra o diagrama,
+    apenas aquele fluxo específico (circulo com X no meio)
+    \item \textbf{Decisão:} Elemento que indica uma condicional e algumas vezes causa um loop
+    (losango)
+    \item \textbf{Transição:} Representa uma transição de uma atividade para outro elemento
+    (seta)
+    \item \textbf{Fork/Join:} Fork divide uma transição em múltiplas transições. Join junta
+    múltiplas transições em uma só, possuem efeitos opostos basicamente. (ambos são representados com uma linha dividindo o antes e depois das transições)
+    \item \textbf{Swimlanes:} Divisões colocadas no diagrama para organizar o momento
+    das atividades. 
+
+\end{enumerate}
+
+\indent
+\textbf{\\Referências}
+
+\begin{enumerate}[label=\textbf{\arabic*}.]
+    
+    \item Anotações da aula 2 de análise orientada a objetos
+    \item https://pt.wikipedia.org/wiki/UML
+    \item https://spaceprogrammer.com/uml/
+
+\end{enumerate}
+\end{document}

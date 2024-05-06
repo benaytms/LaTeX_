@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+
+\title{Lecture 1 Computation in Python}
+\author{Benay Tomas}
+
+\begin{document}
+
+\maketitle
+
+{
+    
+\Large
+
+\section*{What does a computer do?}
+\subsection*{Fundamentally:}
+Performs calculations, a billion per second!
+
+\subsection*{What kinds of calculations?}
+
+\begin{itemize}
+    \item Built-in of most languages like subtraction, addition, 
+    multiplication and division.
+    \item Ones you define as the programmer.
+    \item Others you might import made by others.
+\end{itemize}
+
+\subsection*{Types of Knowledge}
+
+\begin{itemize}
+    \item Declarative Knowledge: statements of facts.\\
+    Ex: Simon did that.\\
+    In programming this would be the variables.
+    \item Imperative Knowledge: command, instructions.\\
+    Ex: Simon, do that.\\
+    In programming this would be the expressions and 
+    calculations that generate variables and results.
+\end{itemize}
+
+\subsection*{What is a recipe?}
+
+A sequence of steps with a flow control process that
+specifies when each step is executed and has a mean 
+of determining when to stop.
+
+Recipes are also called algorithms.
+
+\subsection*{Stored Program Computer}
+
+Sequence of instructions stored inside computers.
+Built from predefined set of primitive instructions.
+
+1. Arithmetic and logic. 
+2. Simples tests. 
+3. Moving data. 
+
+\newpage
+
+Special programs executes each instruction in the order
+you planned, if you declare a variable after using it,
+the computer won't understand, so you need to do everything
+you need on a specific order.
+
+\subsection*{Aspects of Languages}
+
+\begin{itemize}
+    \item Primitive Constructs: The most basic aspect 
+    of languages, in English it's the words. In programming
+    it's numbers, strings and operators.
+    \item Syntax: Another aspect of languages is the Syntax,
+    this will define the difference every language. If you
+    use the incorrect syntax the interpreter won't be able
+    to understand what you're trying to do.
+    \item Semantics: Is which syntatically expressions
+    also have meanings. For instance you can do the expression:\\
+    3 + `a' and this is syntatically correct because there's
+    2 objects and 1 operator between them, but it doesn't make sense.\\
+    3 + 5 is syntatically correct and have semantics sense.
+\end{itemize}
+
+\subsection*{Python programs}
+
+A program is a sequence of definitions and commands.
+Commands are executed by the Python interpreter.
+To make programs you can use IDE's there you may use
+a Shell or the Editor. Shell is used for more basics
+and short programs, the Editor is used for the opposite.
+
+\subsection*{Objects}
+
+Python is a programming language object oriented.
+This means everything is an object from a class, 
+and every class has a series of methods and atributes.
+
+\begin{itemize}
+    \item Programs can manipulate data objects.
+    \item Objects have a type that defines the kinds
+    of things programs can do to them.\\
+    Integers can make mathematical operations.\\
+    Lists can have multiple single values.
+    \item Objects can be:\\
+    Scalar and non-Scalar.
+    Scalar objects are objects that are associated with just one value.
+    While non-scalar objects can be associated with multiple values, like Lists.
+\end{itemize}
+
+\subsection*{Scalar Objects}
+
+\begin{itemize}
+    \item int: represent integers, ex: 5.
+    \item float: represent real numbers, ex: 3.42.
+    \item bool: represent boolean values True and False.
+    \item NoneType: represent no type, None.
+    \item $type()$: shows the type of an object.
+\end{itemize}
+
+Its possible to convert objects of one type
+to another.
+
+$float(3)$ = converts int 3 to float 3.0.
+
+$int(3.9)$ = truncates float 3.9 to int 3.
+
+\vspace*{0.30cm}
+
+to show an output from code to user, there's the 
+$print()$ command:
+
+$print(3+5)$
+
+output: 8
+
+\subsection*{Expressions}
+
+\begin{itemize}
+    \item Combine objects and operators to form it.
+    \item An expression has a resultant-value, which
+    has a type that depends on its objects and in case
+    of the division it will always turn into float.
+    \item Syntax for a simple expression: $<object> 
+    <operator> <object>$
+\end{itemize}
+
+\subsection{Operators}
+\
+\begin{itemize}
+    \item i + j = sums i and j.
+    \item i $-$ j = subtracts j from i.
+    \item i * j = multiplies i with j.
+    \item i / j = divides i with j.
+    \item i // j = rounds the division with the nearest whole number.
+    \item i \% j = returns the remainder of i/j.
+    \item i ** j = i to the power of j.
+    \item There's also the logic operators but we'll see them later.
+\end{itemize}
+
+\newpage
+
+\subsection*{Binding variables and values}
+
+We use the equal sign `=' to represent assignment of a value to a variable.
+In this format: $ <variablename> $ = $ <value> $
+
+For example: $pi = 3.14159$
+
+The value $3.14159$ will be associated with the variable $pi$ and it will be
+store in computer memory. By typing $pi$ we will be able to use the value
+whenever needed in the program. We can change the value if needed too.
+But if used in an expression before changed, the expression will have
+to be rewrite after the changes, if not the old value will still be in use.
+
+
+}
+\end{document}
