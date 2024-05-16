@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tgschola}
+\usepackage{mathptmx}
+
+\newcommand{\minus}{\scalebox{0.8}{$-$}}
+\newcommand{\plus}{\scalebox{0.6}{$+$}}
+\newcommand{\four}{\scalebox{0.8}{$4$}}
+
+\title{Lecture 1 Mathematics for Computer Science}
+\author{Benay Tomas}
+
+\begin{document}
+
+\fontfamily{qcs}\selectfont
+
+\maketitle
+
+
+\section{Proof}
+Proof is a method for ascertaining the truth.
+
+These are some forms of proving:
+
+\begin{itemize}
+    \item Experimentation, Observation
+    \item Sampling, Counter Exampling
+    \item Common Sense
+\end{itemize}
+
+A mathematical proof is a verification of a \underline{propositions}
+by a chain of logical deductions from a set of \underline{axioms.}
+
+\subsection{Proposition}
+
+A proposition is a statement
+that can be true or false.
+
+\textbf{Examples.}
+
+\begin{itemize}
+    \item[] 2+3=5 is True. The sky is
+    yellow is False.
+    \item[] $\forall n \in N$ [ n² + n + 41 is a prime number ]
+    \item[] $\exists a, b, c, d \in N\plus$ [ $a^{4} + b^{4} + c^{4} = d^{4}$ ]
+    \item[] 313(x³+y³) = z³ [ has no positive integer solutions ]
+    \item[] Goldbach's proposition: Every even positive integer but 2 is the sum of 2 primes.
+    \item[] $\forall n \in Z\plus$ [ $n \ge 2 \implies n^{2} \ge 4$ ]
+\end{itemize}
+
+The part inside the brackets is called
+predicate, and it's a proposition where 
+to be truth it depends on a variable value.
+
+And the arrow is called an \underline{implication.}
+
+\subsubsection{Implication}
+An implication is a statement
+in which one proposition implies another one.\\
+
+For example, let P and Q be two different propositions,
+
+P $\implies$ Q reads as P implies Q.\\
+
+In this case, we have some possibilities for P and Q and for the
+statement as whole.
+These possibilities are ordely written in what's called a Truth Table:
+
+\begin{displaymath}
+    \begin{array}{|c c|c|}
+        P & Q & P \implies Q\\
+        \hline
+        T & T & T\\
+        T & F & F\\
+        F & T & T\\
+        F & F & F\\
+    \end{array}
+\end{displaymath}
+
+\newpage
+\indent
+There is also the double implication
+or biconditional, in which is exactly 
+like the implication but Q also implies P.
+
+The notation is:
+
+$P \iff Q$
+
+And the Truth Table for this one would be:
+
+\begin{displaymath}
+    \begin{array}{|c c|c|}
+        P & Q & P \iff Q\\
+        \hline
+        T & T & T\\
+        T & F & F\\
+        F & T & F\\
+        F & F & T\\
+    \end{array}
+\end{displaymath}
+
+\subsection{Axioms}
+
+
+Now an axiom is a proposition in which
+we assume to be True. We say assume because most of it
+is so fundamental and basic that we don't have
+ways to prove it, so we assume to be True
+by common sense and use it 
+to prove others that we actually have to prove.\\
+
+\textbf{Examples.}
+
+If a = b, and b = c, then a = c.
+
+If A $*$ B = 0, then A=0 or B=0 or A=B=0.\\
+
+A general rule about axioms is that they must
+be consistent and non-redundant.
+
+Being consistent means it should be impossible for an axiom
+to be True and False at the same time.
+And non-redundant means they must mean something and must be useful to proof.
+
+\end{document}
