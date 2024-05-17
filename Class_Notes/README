@@ -1,7 +1,7 @@
 for the .rnote files you must have the rnote software.
 (i tried finding a way to convert to PDF but it was no use)
 
-in case you want it run these commands:
+in case you want it, run these commands:
 Linux: 
 sudo <your-package-manager> install flatpak
 flatpak install flathub 
