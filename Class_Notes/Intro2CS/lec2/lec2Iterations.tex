@@ -1,0 +1,185 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tgschola}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+
+\newcommand{\minus}{\scalebox{0.8}{$-$}}
+\newcommand{\plus}{\scalebox{0.6}{$+$}}
+\newcommand{\four}{\scalebox{0.8}{$4$}}
+
+\title{Lecture 2 Introduction to Computer Science}
+\author{Benay Tomas}
+
+\begin{document}
+
+\fontfamily{qcs}\selectfont
+
+\maketitle
+
+\thispagestyle{empty}
+
+\textbf{Subjects Seen}
+
+String object type, branching and conditionals,
+indentation and iteration/loops
+
+\section{Strings}
+Letters; Special characters; Spaces; Digits
+
+Strings variables need to be enclosed in quotation marks, or single quotes.
+
+\textbf{greetings} = "hello there"
+
+\noindent
+To concatenate strings we use "+".
+For example,
+
+name = "Ana"
+
+phrase = greetings + " " + name
+
+\noindent
+This will give us
+
+phrase = hello there Ana
+
+\subsection{Input and Output}
+To output information to the console
+we use the \textbf{'print'} built-in function.
+
+\textbf{Example.}
+
+x = "this is a written message"
+
+print(x)
+
+Output: this is a written message
+
+\noindent
+To receive information instead of outputting
+we use the \textbf{input} built-in function.
+
+\textbf{Example.}
+
+text = input("Type anything: ")
+user: anything
+
+print(text)
+
+Output: anything
+
+\section{Comparison Operators}
+Consider i and j are variables names of int or string type.
+
+\noindent
+Float could be used too but is not advised, as they are volatile when trying to compare it.
+
+See below some comparison examples.
+
+i $>$ j or i $<$ j
+
+i $>=$ j or i $<=$ j
+
+i $==$ j
+
+i $!=$ j
+
+They are evaluated and returns \textbf{True} or \textbf{False.}
+
+\section{Logic Operators}
+Let a and b are variable names (with Boolean values)
+
+\begin{itemize}
+    \item and: a and b, means a and b need to be True to be True.
+    \item or: a or b, means at least one of them needs to be True to the expression to be True.
+    \item not: not a, not b, means whatever a or b is it will be reversed.
+\end{itemize}
+
+\newpage
+\pagestyle{headings}
+
+\section{Branching}
+To control flow we need Branching, and for this
+we use the \textbf{if-else} expression.
+
+\textbf{if-else} structure:
+
+if $<condition>$:\\
+    \hspace*{0.85cm}$<expression>$
+
+else:\\
+    \hspace*{0.85cm}$<expression>$
+
+\noindent
+If the condition is not matched, it'll execute
+the expression inside the else.
+
+We may also have the \textbf{elif} statement,
+this will be basically an \textbf{else} statement but 
+with a condition to be met, so we can have multiple
+branching.
+
+if $<condition>$:\\
+    \hspace*{0.85cm}$<expression>$
+
+elif $<condition>$:\\
+    \hspace*{0.85cm}$<expression>$
+
+else:\\
+    \hspace*{0.85cm}$<expression>$
+
+
+\section{Indentation}
+Indentation is the base of Python.
+
+Differently from other languages, Python doesn't use
+curly brackets to indent statements, it use tabs
+indentation.
+
+\section{While-loops}
+The while structure works like an if-else except it keeps
+repeating the expresisons inside the while statement until
+the condition is not met (False).
+
+\textbf{While Structure}
+
+while $<condition>$:\\
+    \hspace*{1.5cm}$<expression>$\\
+    \hspace*{1.5cm}...
+
+\section{For-loops}
+The for-loop structure works as a form of iteration
+with a known number of times you want the loop to last.
+
+\textbf{For Structure}
+
+for $<iterable-variable>$ in $<range>$:\\
+    \hspace*{1.05cm}$<expression>$
+
+This structure can be highly changed, you can have more than
+one variable iterating, if having the accordingly range;
+You can have the range to be with the built-in function range,
+where you may specify the start, stop and increment. But 
+you can also have another methods of range, this will depend
+on your needs.
+
+\textbf{Break Statement}
+
+The break statement is a built-in function that'll exit 
+the current loop you might be in.
+
+\vfill
+
+\begin{center}
+    Curitiba
+
+    2024
+\end{center}
+
+
+
+\end{document}
