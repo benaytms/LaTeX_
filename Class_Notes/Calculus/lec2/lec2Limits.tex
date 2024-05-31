@@ -1,0 +1,216 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tgschola}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+
+\newcommand{\minus}{\scalebox{0.8}{$-$}}
+\newcommand{\plus}{\scalebox{0.6}{$+$}}
+\newcommand{\four}{\scalebox{0.8}{$4$}}
+
+\title{Lecture 2 Limits}
+\author{Benay Tomas}
+
+\begin{document}
+
+\fontfamily{qcs}\selectfont
+
+\maketitle
+
+\thispagestyle{empty}
+
+\section{Rate of Change}
+\textbf{Average Change:} {\large $\frac{\Delta Y}{\Delta x}$} $-$ Represents the average
+change of Y over the change of x.
+
+\noindent
+\textbf{Instantaneous Rate:} {\large$\frac{dY}{dx}$} $-$ This, unlike the avg. change,
+represents the rate of Y when x is very minimal.
+
+The best way to understand this is with a Physics example;
+
+Let's say we drop a pumpkin from the top of a 80m building.
+Now assume the pumpkin position has a formula given by: h = 80 - 5t², where
+h is the height of the pumpkin.
+
+We dropped the pumpkin and it took 4s to splash on the ground, with this
+information we can gather some pretty interesting data. 
+
+First, the average speed, having passed 80m in 4s, we can safely assume
+that the average speed of the pumpkin was of 20m/s. Now let's derivate
+the position formula, 80 - 5t², with some simple operations we get
+s(t) = -10t as the formula for the speed. So we plug in the 4 seconds and
+find that the speed the pumpkin hit the ground with was -40m/s (the negative
+sign being because of the perspective we adopted).
+
+This goes to show how important is to know the instantaneous rate of something
+and therefore how important the derivative is.
+
+\section{Limits and Continuity}
+Firstly we'll start by explaining two types of limits, the easy ones and the
+hard ones. These aren't actually official classifications but we'll use it
+anyway.
+
+The easy ones we can usually just plug in the value and it's all done.
+
+\textbf{Some examples are:}
+
+{\large
+\begin{itemize}
+    \item[] $\lim\limits_{x \to 4} \frac{x+3}{x+4} =  \frac{7}{8}$
+    \item[] $\lim\limits_{x \to 0} \frac{25x^{2} + 12x + 3}{2x + 4} = 3$
+\end{itemize}
+}
+These limits don't have indeterminations or any kind of complication whatsoever.
+They are straight forward, you put the value for which x is approximating towards
+and that is it.
+
+Now the hard ones are bit more complicated, as the name suggests. These
+limits usually result in some sort of indetermination, for instance:
+{\large $\frac{\infty}{\infty}, \frac{0}{0}, 0 \times \infty, 1 \times \infty, \infty - \infty.$}
+
+There's a couple more but these are the most common ones.
+
+To handle these hard ones usually revolves around manipulating the polynomials in a 
+way that removes the part that is causing the indetermination.
+
+\textbf{For example:}
+
+{\large
+    $\lim\limits_{x \to 3} \frac{x^{2} - 9}{x-3} = \frac{0}{0}$
+}
+
+So what we have to do in this case is to expand the numerator, x² - 9;
+You may have recalled the 
+
+a² - b² expression, which can be rewritten as (a-b)(a+b)
+
+We'll have: {\large $\lim\limits_{x \to 3} \frac{(x-3)(x+3)}{x-3}$}
+
+Then we cancel out the common $x - 3$ and we'll get:
+
+{\large $\lim\limits_{x \to 3} \frac{(x+3)}{1} $} = 6
+
+\newpage
+\subsection{Continuity}
+Before introducing the concept of continuity, we'll first see about
+left-right-hand limits. 
+
+{\large $\lim\limits_{x \to 0^{\plus}} f(x)$} 
+
+The zero with a plus sign
+represents that x is approaching zero from positive numbers, this means
+x will be sufficiently close to zero but will always be larger than 
+zero and this is called a right-hand limit.
+
+{\large $\lim\limits_{x \to 0^{\minus}} f(x)$} 
+
+Follows the same principle, x will be sufficiently close to zero to be considered
+zero but won't actually be zero, it'll be slighty smaller and this is called
+a left-hand limit.
+
+\textbf{A function is continuos at C if}
+
+\begin{enumerate}
+    \item {\large $\lim\limits_{x \to C} f(x)$} exists
+    \item {\large $\lim\limits_{x \to C^{\plus}} f(x)$} =
+    {\large $\lim\limits_{x \to C^{\minus}} f(x)$}
+    \item {\large $\lim\limits_{x \to C} f(x)$} = $f(C)$
+\end{enumerate}
+
+If these 3 happen to be true, then $f(x)$ is continuos at $C$.
+
+\subsection{Discontinuity}
+Following the concept of continuity, discontinuity is when in a random
+point B the function is not continuos.
+
+There are 4 types of discontinuity. See it below:
+
+\begin{center}
+    \includegraphics*[height=6cm, width=16cm]{discontinuities.png}
+\end{center}
+
+The Removable discontinuity is when in a function $f(x)$ doesn't exist
+the point $f(a)$, the reason for this can vary but usually at that specific
+point occurs an indetermination.
+
+The Infinite discontinuity is when the left and right-hand limits coincide
+in positive infinity and negative infinity, so the limit at that specific
+point doesn't exist, therefore is not continuos.
+
+The Jump discontinuity is the same as the infinite discontinuity, the difference
+is that the left and right-hand limits coincide in two different values (that is not infity) 
+when x = a. In this case the function can decide in which of the 2 limits
+the point $f(a)$ exists, in the picture it the function specified that
+the left-hand limit includes the point 'a'.
+
+The Oscillating discontinuity happens usually with trigonometric functions.
+
+\newpage
+\thispagestyle{headings}
+
+\section{Differentiabilty implies continuity ($D => C$)}
+\underline{\textbf{Definition.}}
+
+\noindent
+If a function $f$ is differentiable at
+a point C, then the function is continuos at C.
+
+Differentiabilty is the capability of a function to be derived in a 
+certain point.
+
+Continuity is when the limit of a function in a certain point exists
+and that limit is the same as the function itself in that specific point.
+
+\noindent
+\underline{\textbf{Proof.}}
+
+Assume: $f$ is differentiable at C.
+
+{\large $\lim\limits_{x \to C} f(x) - f(C) = \lim\limits_{x \to C} (x-c) \frac{f(x) - f(C)}{x-c}$}
+
+\vspace{0.5cm}
+
+{\large $[\lim\limits_{x \to C} (x-C)] \cdot [\lim\limits_{x \to C} \frac{f(x) - f(C)}{x-c}]$}
+
+\vspace{0.5cm}
+
+{\large $0 \cdot f'(C)$}
+
+\vspace{0.5cm}
+So this means that {\large $\lim\limits_{x \to C} f(x) - f(C) = 0$}
+
+\vspace{0.5cm}
+With that we can divide the limit as so
+
+{\large $\lim\limits_{x \to C} f(x) - \lim\limits_{x \to C} f(C) = 0$ and $\lim\limits_{x \to C} f(C)$ is simply $f(C)$}
+
+\vspace{0.5cm}
+So we get to:
+
+\vspace{0.1cm}
+
+{\large $\lim\limits_{x \to C} f(x) = f(C)$}
+
+\vspace{0.5cm}
+This being, if a function $f(x)$ is differentiable at C, then it is continuos
+at that same point.
+
+\section*{References}
+\begin{enumerate}
+    \item Derivatives, limits, sums and integrals in LaTeX - maths.tcd.ie/
+    \item Indeterminate forms - calcworkshop.com/limits/
+    \item Personal Lecture Notes
+\end{enumerate}
+
+\vfill
+\begin{center}
+    Curitiba
+
+    2024
+\end{center}
+
+\end{document}
