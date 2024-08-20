@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/TeX Live for SUSE Linux) (preloaded format=pdflatex 2024.8.6)  20 AUG 2024 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/TeX Live for SUSE Linux) (preloaded format=pdflatex 2024.5.20)  15 JUN 2024 01:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/betomate/GitRepos/LaTeX_/Curriculo/curriculo.tex
-(/home/betomate/GitRepos/LaTeX_/Curriculo/curriculo.tex
+**/home/tomate.be/GitHub_Repository/Latex_/Curriculo/curriculo.tex
+(/home/tomate.be/GitHub_Repository/Latex_/Curriculo/curriculo.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/share/texmf/tex/latex/base/article.cls
@@ -251,11 +251,11 @@ Package hyperref Info: Link coloring OFF on input line 36.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-rm.enc}]
 
 LaTeX Font Warning: Font shape `OT1/qcs/m/sl' in size <10> not available
-(Font)              Font shape `OT1/qcs/m/it' tried instead on input line 210.
+(Font)              Font shape `OT1/qcs/m/it' tried instead on input line 214.
 
 
 LaTeX Font Warning: Font shape `OT1/qcs/b/sl' in size <10> not available
-(Font)              Font shape `OT1/qcs/b/it' tried instead on input line 210.
+(Font)              Font shape `OT1/qcs/b/it' tried instead on input line 214.
 
 [2] (./curriculo.aux)
  ***********
@@ -266,18 +266,18 @@ Package rerunfilecheck Info: File `curriculo.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8600 strings out of 474116
- 133335 string characters out of 5752737
- 1936187 words of memory out of 5000000
- 30895 multiletter control sequences out of 15000+600000
+ 8601 strings out of 475153
+ 133375 string characters out of 5770014
+ 1937187 words of memory out of 5000000
+ 30730 multiletter control sequences out of 15000+600000
  585504 words of font info for 45 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 69i,5n,79p,267b,438s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 475 hyphenation exceptions out of 8191
+ 69i,5n,79p,277b,438s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/tex-gyre/qcsb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qcsbi.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qcsr.pfb>
-Output written on curriculo.pdf (2 pages, 84536 bytes).
+Output written on curriculo.pdf (2 pages, 83889 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 41 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

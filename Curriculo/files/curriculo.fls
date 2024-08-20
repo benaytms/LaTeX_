@@ -1,8 +1,8 @@
-PWD /home/betomate/GitRepos/LaTeX_/Curriculo
+PWD /home/tomate.be/GitHub_Repository/Latex_/Curriculo
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/betomate/GitRepos/LaTeX_/Curriculo/curriculo.tex
+INPUT /home/tomate.be/GitHub_Repository/Latex_/Curriculo/curriculo.tex
 OUTPUT curriculo.log
 INPUT /usr/share/texmf/tex/latex/base/article.cls
 INPUT /usr/share/texmf/tex/latex/base/article.cls
